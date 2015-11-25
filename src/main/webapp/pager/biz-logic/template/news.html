@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>香港旗晟控股有限公司</title>
+<link href="../css/public.css" rel="stylesheet">
+<link href="../css/index.css" rel="stylesheet">
+
+</head>
+<div id="header">
+  <div class="g-wrap">
+    <a id="logo" href="../index.html"></a>
+    <ul id="nav">
+      <li class="n1">
+        <a class="" href="../index.html">
+          <span>首页</span>
+          <span class="bkg"></span>
+        </a>
+      </li>
+      <li class="n2 more">
+        <a class="" href="../about.html" idx="0">
+          <span>公司简介</span>
+          <span class="bkg"></span>
+        </a>
+      </li>
+      <li class="n3 more">
+        <a class="splt" href="index.html" idx="1">
+          <span>新闻中心</span>
+          <span class="bkg"></span>
+        </a>
+      </li>
+      <li class="n4 more">
+        <a class="" href="../soltion.html" idx="1">
+          <span>解决方案</span>
+          <span class="bkg"></span>
+        </a>
+      </li>
+      <li class="n5 more">
+        <a class="" href="../jobs.html" idx="1">
+          <span>人才招聘</span>
+          <span class="bkg"></span>
+        </a>
+      </li>
+      <li class="n6 more">
+        <a class="" href="../contact.html" idx="1">
+          <span>联系我们</span>
+          <span class="bkg"></span>
+        </a>
+      </li>   
+    </ul>
+  </div>
+</div>
+
+
+<div id="content">
+  <div class="banner-news"></div>  
+   
+  <!-- news start --> 
+  <div class="item_box">
+    <div class="news_list">
+    <%
+          for(news in newsList){ 
+         var  detail = base+"/news/detail?id="+ news.id;
+            	%>
+      <dl>
+        <dt>
+          <b>${news.day}</b>
+          <br>
+          <span class="english"> ${news.month}月 </span>
+        </dt>
+        <dd>
+          <p class="tit"><a href="${detail}">${news.title}</a></p>
+          <p class="date">${news.createTime} ${news.editor}</p>
+          <p class="txt">${news.summary}</p>
+          <p class="more"><a href="${detail}">阅读全文</a></p>
+        </dd>
+      </dl>
+         <%	}	%>
+      <!-- 新闻分页news start --> 
+      <!--
+      <div class="pagenum">
+        <span>共<i>38</i>条记录 每页显示5条 当前2/8页</span>
+        <a class="first" href="/news?currentPage=1"> </a>
+        <a class="prev" href="/news?currentPage=1"> </a>
+        <a class="next" href="/news?currentPage=3"> </a>
+        <a class="last" href="/news?currentPage=8"></a>
+        
+        <span>
+          <input id="inputPage" type="text">
+          <input class="go" type="button" onclick="inputPage()" value="GO">
+        </span>
+      </div>
+      -->
+    </div>
+  </div> 
+     
+</div>
+
+<!-- footer start --> 
+<div class="ft_footer">
+  <div class="copyright">
+    <div class="ft_footer_wp">
+      <p>
+        电话：0755-86561888 <span class="icp">传真：0755-86512088</span><br/>
+        © 香港旗晟控股有限公司. All Rights Reserved        
+        <span class="icp">渝ICP备14009216号-5</span>
+      </p>
+    </div>
+  </div>
+</div>
+<body>
+</body>
+</html>

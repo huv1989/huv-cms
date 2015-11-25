@@ -1,0 +1,3 @@
+INSERT INTO `sys_user` VALUES (1, '系统管理员', 'admin', '96e79218965eb72c92a549dd5a330112', 'huyax1990@163.com', NULL, NULL, 1, '2015-10-8 16:55:41', '2014-11-26 10:17:29', NULL);
+INSERT INTO `sys_user` VALUES (2, '系统管理员', 'huwei', '96e79218965eb72c92a549dd5a330112', '290259750@qq.com', NULL, NULL, 1, NULL, '2015-10-13 11:10:01', NULL);
+INSERT INTO `sys_user` VALUES (3, '系统管理员', 'huwei2', '96e79218965eb72c92a549dd5a330112', '290259750@qq.com', NULL, NULL, 1, NULL, '2015-11-23 11:00:09', NULL);

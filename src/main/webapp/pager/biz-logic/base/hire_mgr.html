@@ -1,0 +1,79 @@
+<#compress>
+<!DOCTYPE html>
+<html>
+<head>
+<title>招聘管理</title>
+<% include("/pager/common/quote.html"){} %>
+<script type="text/javascript">
+window.roles = ${rolesJson};
+</script>
+</head>
+<body>
+    <div class="body-center">
+        <div class="html-panel query-panel" id="query_con">
+            <div class="panel-header"><div class="panel-title">查询条件</div></div>
+            <div class="panel-content" id="menuMgrPanel">
+                <form onsubmit="return false;" id="queryForm" class="form_style">
+                    <span class="spacing"><label>状态：</label><select name="status"><option value="">==请选择==</option><option value="1">正常</option><option value="0">停用</option></select></span>
+                    <span class="spacing"><input type="submit" id="queryButton" value="查询"/></span>
+                </form>
+            </div>
+        </div>
+        <table id="grid" data-options="url:'hire/list'" title="招聘列表">
+            <thead>
+                <th data-options="field:'position',width:80,resizable:true,align:'left'">职位</th>
+                <th data-options="field:'location',width:80,resizable:true,align:'left'">工作地点</th>
+                <th data-options="field:'experience',width:80,resizable:true,align:'left'">工作经验</th>
+                <th data-options="field:'edu',width:80,resizable:true,align:'left'">学历</th>
+                <th data-options="field:'pay',width:80,resizable:true,align:'left'">学历</th>
+                <th data-options="field:'attract',width:100,resizable:true,align:'left'">职位诱惑</th>
+                <th data-options="field:'status',width:30,resizable:true,align:'left',formatter:formatter.status">状态</th>
+                <th data-options="field:'update_time',width:80,resizable:true,align:'left'">修改时间</th>
+                <th data-options="field:'create_time',width:80,resizable:true,align:'left'">创建时间</th>
+                <th data-options="field:'opt',width:100,resizable:true,align:'center',formatter:formatter.opt">操作</th>
+            </thead>
+        </table>
+    </div>
+    <div class="hide-panel">
+        <div id="hireEditDialog" style="width:800px;height:550px;" data-options="resizable:false,modal:true,closed: true">
+            <form id="hireEditForm" class="form_style" method="post" onsubmit="return false;">
+                <input type="hidden" name="hire.id" id="id" />
+                <div class="form-field">
+                    <label for="position">职位：<font color="red">*</font></label>
+                    <input class="easyui-validatebox" type="text" name="hire.position" id="position" style="width: 250px;"  data-options="required:true,validType:'title'" />
+                      <label for="location" style="margin-left: 80px;">工作地点：<font color="red">*</font></label>
+                    <input class="easyui-validatebox" type="text" name="hire.location"  id="location" style="width: 250px;" data-options="required:true"/>
+                </div>
+                <div class="form-field">
+                    <label for="edu">学历：<font color="red">*</font></label>
+                    <input class="easyui-validatebox" type="text" name="hire.edu"  id="edu" style="width: 250px;" data-options="required:true"/>
+                     <label for="experience"  style="margin-left: 80px;">工作经验：<font color="red">*</font></label>
+                    <input class="easyui-validatebox" type="text" name="hire.experience"  id="experience" style="width: 250px;" data-options="required:true"/>
+                </div>
+                <div class="form-field">
+                 <label for="pay">待遇：<font color="red">*</font></label>
+                    <input class="easyui-validatebox" type="text" name="hire.pay"  id="pay" style="width: 250px;" data-options="required:true"/>
+                    <label for="attract"  style="margin-left: 80px;">职位诱惑：<font color="red">*</font></label>
+                    <input class="easyui-validatebox" type="text" name="hire.attract" id="attract"  style="width: 250px;" data-options="required:true"/>                  
+                </div>
+                 <div class="form-field">
+                  <label for="status"  >状态：<font color="red">*</font></label>
+                    <input type="radio" name="hire.status" value="1" checked="checked" id="status1" /><span class="check-label">正常</span>
+                     <input type="radio" name="hire.status" value="0"  id="status2" /><span  class="check-label">停用</span>
+                </div>
+                <div class="form-field">
+                    <label for="req" style="vertical-align: top;" >任职要求：<font color="red">*</font></label>
+                    <textarea rows=""  style="width: 250px;height: 250px;resize:none;" data-options="required:true" name="hire.req" id = "req" 
+                    placeHolder="每一行都以<p>开头,以</p>结尾。如示例：<p>1、对设计模式有所了解和应用；</p>">
+                    </textarea>
+                     <label for="duty" style="margin-left: 80px;vertical-align: top;">岗位职责：<font color="red">*</font></label>
+                     <textarea rows=""  style="width: 250px;height: 250px;resize:none;"  data-options="required:true"  name="hire.duty" id = "duty"
+                      placeHolder="每一行都以<p>开头,以</p>结尾。如示例：<p>1、对设计模式有所了解和应用；</p>">
+                      </textarea>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+</#compress>

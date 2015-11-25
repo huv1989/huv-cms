@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>香港旗晟控股有限公司</title>
+<link href="css/public.css" rel="stylesheet">
+<link href="css/index.css" rel="stylesheet">
+
+</head>
+<div id="header">
+  <div class="g-wrap">
+    <a id="logo" href="index.html"></a>
+    <ul id="nav">
+      <li class="n1">
+        <a class="" href="index.html">
+          <span>首页</span>
+          <span class="bkg"></span>
+        </a>
+      </li>
+      <li class="n2 more">
+        <a class="" href="about.html" idx="0">
+          <span>公司简介</span>
+          <span class="bkg"></span>
+        </a>
+      </li>
+      <li class="n3 more">
+        <a class="" href="news/index.html" idx="1">
+          <span>新闻中心</span>
+          <span class="bkg"></span>
+        </a>
+      </li>
+      <li class="n4 more">
+        <a class="" href="soltion.html" idx="1">
+          <span>解决方案</span>
+          <span class="bkg"></span>
+        </a>
+      </li>
+      <li class="n5 more">
+        <a class="splt" href="jobs.html" idx="1">
+          <span>人才招聘</span>
+          <span class="bkg"></span>
+        </a>
+      </li>
+      <li class="n6 more">
+        <a class="" href="contact.html" idx="1">
+          <span>联系我们</span>
+          <span class="bkg"></span>
+        </a>
+      </li>   
+    </ul>
+  </div>
+</div>
+
+
+<div id="content">
+  <div class="banner-hr"></div> 
+   
+  <!-- about start --> 
+  <div class="jobs-wap">
+    <div class="jobs-cont">
+    <% 
+    var i= 0;
+    for(hire in hireList){
+    ++i;
+    %>
+      <div class="jobs-frame" <%if(i % 2 == 0){ %>style="float:right;" <% }%>>
+        <h1>${hire.position} </h1>        
+        <p>薪酬待遇：${hire.pay}<span class="icp">工作地点：${hire.location}</span><span class="icp">工作经验：${hire.experience}</span><span class="icp">学历：${hire.edu}</span></p>
+        <p>职位诱惑：${hire.attract}</p><p>发布时间：${hire.createTime}</p>
+        <h2>任职要求:</h2>
+        ${hire.req}
+        <h2>岗位职责:</h2>
+        ${hire.duty}
+        <br>
+        <p></p>
+        <a class="a_but" href="mailto:yan.zhang@qsun.hk">应聘职位</a>
+      </div>
+      <%if(i % 2 == 0){ %>  <div class="clear"></div> <% }%>
+      <% } %>
+    </div>
+  </div>    
+  
+</div>
+
+<!-- footer start --> 
+<div class="ft_footer">
+  <div class="copyright">
+    <div class="ft_footer_wp">
+      <p>
+        电话：0755-86561888 <span class="icp">传真：0755-86512088</span><br/>
+        © 香港旗晟控股有限公司. All Rights Reserved        
+        <span class="icp">渝ICP备14009216号-5</span>
+      </p>
+    </div>
+  </div>
+</div>
+<body>
+</body>
+</html>

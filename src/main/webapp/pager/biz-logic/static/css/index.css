@@ -1,0 +1,155 @@
+/*body {overflow-x:auto; overflow-y:hidden;}*/
+body {height:auto; +overflow:hidden;}
+#banner {position:relative; width:100%; height:550px; overflow:hidden;}
+#banner .pics {position:relative; width:100%; height:100%;}
+#banner .pics li {display:none; position:absolute; top:0; left:0; z-index:2; width:100%; height:100%; background:no-repeat center 0;}
+#banner .pics li a {display:block; width:100%; height:100%;}
+#banner .pics .b1 {display:list-item;}
+#banner .btns a {position:absolute; top:50%; z-index:4; margin-top:-25px; width:50px; height:50px; -ms-transition:left 400ms, right 400ms; transition:left 400ms, right 400ms; -webkit-transition:left 400ms, right 400ms; -moz-transition:left 400ms, right 400ms; -o-transition:left 400ms, right 400ms;}
+#banner .btns .prev {left:-50px;}
+#banner .btns .next {right:-50px;}
+#banner .btns .prev.on {left:120px;}
+#banner .btns .next.on {right:120px;}
+#banner .btns a span {position:absolute; top:0; left:0; width:100%; height:100%; -ms-transition:-ms-opacity 300ms;  transition:opacity 300ms;-webkit-transition:-webkit-opacity 300ms; -moz-transition:-moz-opacity 300ms; -o-transition:-o-opacity 300ms; cursor:pointer;}
+#banner .btns a span.off {-webkit-opacity:1; opacity:1; display:block\9;}
+#banner .btns a span.on {-webkit-opacity:0; opacity:0; display:none\9;}
+#banner .btns .prev .off {background:url(../images/prev.png) no-repeat 0 0;}
+#banner .btns .prev .on  {background:url(../images/prev_on.png) no-repeat 0 0;}
+#banner .btns .next .off {background:url(../images/next.png) no-repeat 0 0;}
+#banner .btns .next .on {background:url(../images/next_on.png) no-repeat 0 0;}
+#banner .btns a:hover .off {-webkit-opacity:0; opacity:0; display:none\9;}
+#banner .btns a:hover .on {-webkit-opacity:1; opacity:1; display:block\9;}
+
+#banner .g-wrap {position:absolute; left:50%; bottom:0; z-index:2; margin-left:-565px; width:1130px; height:30px; overflow:hidden;}
+#banner .g-wrap .idxs {float:left; height:100%;}
+#banner .g-wrap .idxs li {float:left; margin:30px 7px 0 0; width:9px; height:9px; border-radius:13px; border:2px solid #fff; cursor:pointer; -ms-transition:background-color 1000ms, margin-top 500ms, border-color 1000ms; transition:background-color 500ms, margin-top 500ms; transition:background-color 1000ms, margin-top 500ms, border-color 1000ms; -webkit-transition:background-color 1000ms, margin-top 500ms, border-color 1000ms; -moz-transition:background-color 1000ms,  margin-top 500ms, border-color 1000ms; -o-transition:background-color 1000ms, margin-top 500ms, border-color 1000ms;}
+#banner .g-wrap .idxs li.on {background-color:#8f8d93; border-color:#8f8d93;}
+
+
+/*about start */
+.row{ margin:0 auto; position:relative; width:1135px; }
+.col-sm, .col-row{ float:left; width:354px; position:relative; padding-right:30px; margin-top:50px; }
+.col-row{ padding-right:0px; }
+.col-sm h2{ padding:6px 0px; color:#303030; font-size:18px; }
+.col-sm .tx-p{ color:#616060; overflow:hidden; text-overflow:ellipsis; }
+
+/*partnership start*/
+.box1{ background: #f9f9f9; border-top:1px solid #dfdfdf; margin-top:50px; }
+.box1 .work { margin: 0 auto; width: 1135px; height:auto; display:block; overflow:hidden; padding-bottom:15px; }
+.box1 .work h1, .service_list h1{ color: #3b3b3b; font-size: 42px; margin-bottom: 5px; text-align: center; height:130px; line-height:130px; font-weight:normal; }
+.box1 .work dl{ float:left; width:237px; border:1px dashed #ccc; margin: 0 32px 30px 0; padding:10px 10px; }
+.box1 .work .mume { margin: 0 0 40px 0; }
+.box1 .work dl dt{ text-align:center; line-height:65px; height:65px;  }
+.box1 .work dl dd{ text-align:center; color: #656565; line-height:24px; }
+
+
+/*公司简介 start*/
+.banner-about { background-image: url("../images/banner-about.jpg"); height: 196px; }
+.item_box { overflow: hidden; padding: 62px 0 20px; width: 100%; }
+.item_box_wp { margin: 0 auto; width: 1135px; }
+.item_box_wp dl dt { display: inline; float: left; margin-right: 42px; margin-top: 10px; }
+.item_box_wp dl dd { margin-left: 479px; padding-left: 65px; padding-top: 4px; color:#656565; }
+.item_box_wp .sz-top { margin-top:20px; }
+
+.service{ background: #f9f9f9; border-top:1px solid #dfdfdf; border-bottom:1px solid #dfdfdf; margin-top:50px; }
+.service_list { margin: 0 auto; width: 1135px; height: auto; overflow: hidden; padding-bottom:38px;}
+.service_list li { float: left; width: 318px; padding:20px 30px; }
+.service_icon { text-align:center; line-height:130px; }
+.service_name { color: #3b3b3b; font-size: 18px; margin-top:20px; }
+.service_name, .service_intro { text-align: center;  }
+.service_intro { color: #656565; }
+
+.team-title { overflow: hidden; width: 100%; }
+.team { margin: 0 auto; width: 1135px; }
+.team h1{ color: #3b3b3b; font-size: 42px; margin-bottom: 5px; text-align: center; margin-top:42px;height:65px; line-height:65px; font-weight:normal; }
+.team .sz_title { color: #3b3b3b; font-size: 18px; margin-top: 20px; }
+.team .sz-fot{ color:#656565; }
+.team .phto-img { line-height: 130px; text-align: center; padding:25px 0px; }
+
+
+/*人力招聘 start*/
+.banner-hr { background-image: url("../images/banner-hr.jpg"); height: 196px; }
+.jobs-wap{ background-color: #f7f7f7; padding: 12px 0 62px; width: 100%; }
+.jobs-cont{ margin: 0 auto; width: 1135px; overflow:hidden; }
+.jobs-frame { float: left; overflow: hidden; width: 500px; background: #fff; padding:26px 26px; line-height: 34px; color: #656565; margin-top:50px; height:850px; }
+.jobs-frame p span.icp { display: inline-block; margin-left: 20px; }
+.jobs-frame h1 { color: #3b3b3b; font-size: 18px; padding-bottom:10px; font-weight:normal; }
+.jobs-frame h2 { color: #3b3b3b; font-size: 16px; margin-top: 30px; }
+
+
+.a_but { background: #c7000a;  font-size: 16px; padding: 14px 44px; color: #fff; }
+.a_but:hover { background: #0e334b none repeat scroll 0 0; color: #fff; }
+
+
+/*新闻中心 start*/
+.banner-news { background-image: url("../images/banner-news.jpg"); height: 196px; }
+.news_list { margin: 0 auto; width: 1135px; }
+.news_list dl { margin-bottom: 40px; overflow: hidden; }
+.news_list dt { border-top: 3px solid #ff0000; color: #73737b; display: inline; float: left; padding-top: 5px; text-align: center; width: 76px; }
+.news_list dt { color: #73737b;  text-align: center; }
+.news_list dt b { display: inline-block; font-size: 41px; font-weight: normal; margin-bottom: -10px; }
+.news_list dd .date { color: #999; margin-bottom: 20px; }
+.news_list dt .english { font-size: 14px; }
+.news_list dd { font-size: 14px; margin-left: 187px; }
+.news_list dd .tit { color: #3b3b3b; font-size: 26px; }
+.news_list dd .tit a { color: #3b3b3b; }
+.news_list dd .txt { color: #737373; margin-bottom: 30px; }
+.news_list dd .more { border-bottom: 1px dashed #cfcdce; padding-bottom: 30px; }
+.news_list dd .more a { color: #2e2e2e; }
+
+.pagenum { float:right; display:inline; margin-bottom:30px; font-size: 12px;}
+.pagenum span { padding-left:15px; float: left; display: inline;}
+.pagenum span i { font-style:normal; color:#fca000}
+.pagenum a { display:inline-block; margin-left:10px; float: left; display: inline; margin-top: 2px;}
+.pagenum a.first { background:url("../images/page_bg.png") 0 0 no-repeat; width:14px; height:15px; line-height:15px;}
+.pagenum a.last { background:url("../images/page_bg.png") 0 -18px no-repeat; width:14px; height:15px; line-height:15px;}
+.pagenum a.prev { background:url("../images/page_bg.png") -20px 0px no-repeat; width:11px; height:15px; line-height:15px;}
+.pagenum a.next { background:url("../images/page_bg.png") -20px -18px no-repeat; width:11px; height:15px; line-height:15px;}
+.pagenum input[type='text'] {min-width:42px; border:none; background:url("../images/page_bg.png") 0 -38px no-repeat; width:42px; height:20px; line-height:20px; text-align:right; padding-left:0px; padding-right:5px; margin-right:3px; font-size:12px;}
+.pagenum input[type='text']:focus { background:url("../images/page_bg.png") 0 -38px no-repeat;}
+.pagenum input[type='button'] { border:none; color:#fff; background:url("../images/page_bg.png") 0 -60px no-repeat; width:27px; height:20px; line-height:20px; font-size:12px;}
+
+
+.news_detail { margin: 0 auto; width: 1055px;  background: #fff none repeat scroll 0 0; overflow: hidden; padding: 25px 40px; margin-top:45px;  }
+.news_detail h1 { color: #3b3b3b; font-size: 32px; line-height:54px; margin-bottom: 5px; font-weight: normal; text-align: center; }
+.news_detail h2 { color: #73737b; font-weight:bold; }
+.news_detail h3 { color: #73737b; font-size:14px; }
+.news_detail .date{ color: #73737b; font-size: 16px; text-align: center; margin-bottom:28px; }
+.news_detail .date span.icp { display: inline-block; margin-left: 20px; }
+.news_main { border-bottom: 1px dotted #ccc; border-top: 1px dotted #ccc;  padding: 35px 0 10px; }
+.news_main p { font-size:15px; color: #73737b; margin-bottom: 28px; text-indent: 32px; }
+.news_main p span{ padding-left:50px;}
+.news_fz { height:36px; padding:40px 0px; float:right; }
+.back1 { background: #0e334b none repeat scroll 0 0; color: #fff; font-size: 16px; padding: 14px 24px; }
+.back1:hover { background: #c7000a none repeat scroll 0 0; color: #fff; }
+
+
+/*解决方案 start*/
+.banner-sol { background-image: url("../images/banner-sol.jpg"); height: 196px; }
+.sol_cont { margin: 60px auto; width: 1135px; }
+.sol_cont h1 { color: #3b3b3b; font-size: 42px; font-weight: normal; height: 65px; line-height: 65px; margin-bottom: 5px; text-align: center; }
+.sol_cont h2 { color: #73737b; font-weight: bold; }
+.sol_cont h3 { color: #73737b; font-size: 14px; }
+.sol_cont p{ color: #73737b; font-size: 15px; margin-bottom: 28px; text-indent: 32px; }
+.sol_cont .phto-img { line-height: 130px; padding: 8px 0; text-align: center; }
+
+/*联系我们 start*/
+.banner-contact { background-image: url("../images/banner-contact.jpg"); height: 196px; }
+.contact_cont { margin: 70px auto; width: 1135px; }
+.add_res1 { height: 373px; width: 638px; float:left; }
+.add_res12 { background: #fafafa none repeat scroll 0 0; padding: 0 0 0 40px; width: 457px; height: 373px; line-height: 30px; color: #666; float: right; }
+.add_res12 h2 { color: #3b3b3b; font-size: 32px; font-weight: normal; height: 65px; line-height: 65px; margin-bottom: 5px; margin-top: 42px; border-bottom: 1px dotted #ccc;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

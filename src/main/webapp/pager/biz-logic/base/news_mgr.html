@@ -1,0 +1,68 @@
+<#compress>
+<!DOCTYPE html>
+<html>
+<head>
+<title>新闻管理</title>
+<% include("/pager/common/quote.html"){} %>
+<script type="text/javascript">
+window.roles = ${rolesJson};
+</script>
+</head>
+<body>
+    <div class="body-center">
+        <div class="html-panel query-panel" id="query_con">
+            <div class="panel-header"><div class="panel-title">查询条件</div></div>
+            <div class="panel-content" id="menuMgrPanel">
+                <form onsubmit="return false;" id="queryForm" class="form_style">
+                    <span class="spacing"><label>状态：</label><select name="status"><option value="">==请选择==</option><option value="1">正常</option><option value="0">停用</option></select></span>
+                    <span class="spacing"><input type="submit" id="queryButton" value="查询"/></span>
+                </form>
+            </div>
+        </div>
+        <table id="grid" data-options="url:'news/list'" title="用户列表">
+            <thead>
+                <th data-options="field:'title',width:200,resizable:true,align:'left'">标题</th>
+                <th data-options="field:'editor',width:80,resizable:true,align:'left'">编辑</th>
+                <th data-options="field:'status',width:30,resizable:true,align:'left',formatter:formatter.status">状态</th>
+                <th data-options="field:'update_time',width:80,resizable:true,align:'left'">修改时间</th>
+                <th data-options="field:'create_time',width:80,resizable:true,align:'left'">创建时间</th>
+                <th data-options="field:'opt',width:100,resizable:true,align:'center',formatter:formatter.opt">操作</th>
+            </thead>
+        </table>
+    </div>
+    <div class="hide-panel">
+        <div id="userEditDialog" style="width:1200px;height:700px;" data-options="resizable:false,modal:true,closed: true">
+            <form id="newsEditForm" class="form_style" method="post" onsubmit="return false;">
+                <input type="hidden" name="news.id" id="id" />
+                <div class="form-field">
+                    <label for="title">标题：<font color="red">*</font></label>
+                    <input class="easyui-validatebox" type="text" name="news.title" id="title" style="width: 800px;"  data-options="required:true,validType:'title'" />
+                </div>
+                <div class="form-field">
+                    <label for="summary">摘要：<font color="red">*</font></label>
+                    <input class="easyui-validatebox" type="text" name="news.summary"  id="summary" style="width: 800px;" data-options="required:true"/>
+                </div>
+                <div class="form-field">
+                    <label for="editor">编辑：<font color="red">*</font></label>
+                    <input class="easyui-validatebox" type="text" name="news.editor" id="editor" maxlength="20" data-options="required:true"/>
+                </div>
+                <div class="form-field">
+                    <label for="status">状态：<font color="red">*</font></label>
+                    <input type="radio" name="news.status" value="1" checked="checked" id="status1" /><span class="check-label">正常</span>
+                       <input type="radio" name="news.status" value="0"  id="status2" /><span  class="check-label">停用</span>
+                </div>
+                <div class="form-field">
+                 <label for="status">内容：</label>
+                <p style="margin-left: 80px;">
+			   <textarea  class="ckeditor" id="content" name="news.content" cols="100" rows="10">&lt;p&gt;This is some &lt;strong&gt;sample text&lt;/strong&gt;. You are using &lt;a href="http://ckeditor.com/"&gt;CKEditor&lt;/a&gt;.&lt;/p&gt;</textarea>
+		        </p>
+                </div>
+            </form>
+        </div>
+    	<div id="userRoleDialog" style="width:200px;height:180px;" data-options="resizable:false,modal:true,closed: true,title:'角色分配'">
+    		<ul id="roleZtee" class="ztree"></ul>
+	    </div>
+    </div>
+</body>
+</html>
+</#compress>

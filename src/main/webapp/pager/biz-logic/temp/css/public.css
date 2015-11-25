@@ -1,0 +1,124 @@
+﻿html, body, div, span, applet, object, iframe, h1, h2, h3,
+h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address,
+big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption, tbody, tfoot,
+thead, tr, th, td, input, select {margin:0; padding:0; border:0 none; outline:0; color:inherit;}
+html, body {width:100%; height:100%;}
+body {margin:0 auto;  font: 14px/1.8 Microsoft Yahei,Helvetica,Arial,sans-serif; vertical-align:baseline; overflow-y:scroll;}
+h1 {font-weight:bold; font-size:18px; line-height:18px; color:#474545;}
+h3 {font-weight:normal; font-size:12px; color:#746969;}
+h2, h4, h5, h6 {font-weight:normal; font-size:100%;}
+table {border-collapse:separate; border-spacing:0;}
+caption, th, td {text-align:left;font-weight:normal;}
+a {text-decoration:none;}
+img { outline: medium none;  vertical-align: middle; }
+:focus {outline:0;}
+.clear { clear: both; height: 1px; overflow: hidden; }
+/*img{ vertical-align:top;}*/
+ol, ul {list-style:none;}
+input, textarea, select, button {font-weight:inherit; font-size:inherit; *font-size:100%; font-family:inherit;}
+/* == clearfix == */
+.clearfix:after {display:block; height:0; clear:both; content:"\200B";}
+.clearfix {*zoom:1;}/*IE/7/6*/
+
+/* == 以上 reset Css == */
+
+
+/**************** 全局公用样式 ****************/
+body { max-width:1920px; min-width:1135px; +overflow:hidden;}
+.g-wrap {position:relative; margin:0 auto; width:1135px; height:100%; overflow:hidden;}
+#header {position:relative; z-index:5; height:79px; background-color:#fff;}
+#logo {position:absolute; top:13px; left:1px; width:174px; height:50px; background:url(../images/logo.png) no-repeat 0 0;}
+#nav {position:absolute; top:0; right:0; height:100%; background-color:#fff; overflow:hidden;}
+#nav li {float:left; height:100%; -webkit-transition:background-color 700ms; transition:background-color 700ms;}
+#nav .n1 {width:70px;}
+#nav .n2, #nav .n3, #nav .n4, #nav .n5, #nav .n6, #nav .n7, #nav .n8 {width:105px;}    
+
+#nav li a {position:relative; z-index:2; display:block; width:100%; height:100%; font-weight:bold; font-size:13px; line-height:79px; text-align:center; color:#666; -webkit-transition:color 200ms; transition:color 200ms;}
+#nav li a.on {color:#fff;}
+#nav li a span {position:absolute; left:0; top:0; z-index:2; width:100%; height:100%;}
+#nav li a .bkg {top:100%; z-index:1; background-color:#f00; -webkit-transition:top 200ms; transition:top 200ms;}
+#nav li a.on .bkg, 
+#nav li a:hover .bkg {top:0;} 	
+#content {position:relative; overflow:hidden;}
+#nav li a:hover, #nav .splt, #nav li a:hover{ background: #f00 none repeat scroll 0 0; color: #fff; }
+
+
+
+
+button::-moz-focus-inner,input::-moz-focus-inner{padding:0;border:0;}
+*html{background-image:url(about:blank);background-attachment:fixed;} /* 修正IE6振动bug */
+
+/* slide */
+.slide-main{height:550px;position:relative;}
+.prev,.next{display:block;width:44px;height:44px;position:absolute;z-index:222;top:252px;overflow:hidden;cursor:pointer;opacity:0.6;-moz-opacity:0.6;filter:alpha(opacity=60);_border:1px solid none;}
+.prev{left:70px;}
+.next{right:70px;}
+.prev:hover,.next:hover,.nav-main a:hover,.nav-main a.cur{opacity:1;-moz-opacity:1;filter:alpha(opacity=100);}
+.item{display:block;width:100%;height:5px;position:absolute;z-index:124;top:510px;left:0;text-align:center;}
+.item a{display:inline-block;width:24px;height:5px;margin-right:11px;background:#333;opacity:0.6;-moz-opacity:0.6;filter:alpha(opacity=60);overflow:hidden;}
+.item a.cur{background:#fff;}
+.slide-box,.slide{display:block;width:100%;height:550px;overflow:hidden;}
+.slide-box{position:relative;}
+.slide{display:none;height:490px;padding-top:89px;background:#ff6900;position:relative;position:absolute;z-index:8;}
+#bgstylea{background:url(../images/banner_bg2.jpg) no-repeat 0 0;}
+#bgstyleb{background:url(../images/banner_bg3.jpg) no-repeat 0 0;}
+#bgstylec{background:url(../images/banner_bg1.jpg) no-repeat 0 0;}
+.slide a{display:block;width:100%;height:490px;cursor:pointer;}
+.obj-a,.obj-b,.obj-c,.obj-d,.obj-e,.obj-f{position:absolute;z-index:9;left:50%;}
+.obj-a,.obj-b{width:500px; margin-left:18px; text-align:center;}
+.obj-a{display:block; height:486px; top:64px; width:492px; margin-left:-500px;}
+.obj-b{top:138px; height:180px;}
+.obj-c{display:block; height:100px; top:340px; margin-left:0px;}
+.obj-d{top:185px; height:164px;}
+.obj-d p{display:block; padding-top:20px; font-size:16px; color:#fff; clear:both;}
+.obj-e{width:366px; height:170px; margin-left:-460px; top:280px; z-index:12;}
+.obj-f{width:692px; height:394px; top:180px; margin-left:-460px;}
+.banAnimate .obj-a{display:block;animation-name:baoAni;-webkit-animation:baoAni 0.4s linear 0s normal none;-moz-animation:baoAni 0.4s linear 0s normal none;animation:baoAni 0.4s linear 0s normal none;}
+@-webkit-keyframes baoAni{from{opacity:0;left:60%;} to{opacity:1;left:50%;} }
+@-moz-keyframes baoAni{from{opacity:0;left:60%;} to{opacity:1;left:50%;} }
+@keyframes baoAni{from{opacity:0;left:60%;} to{opacity:1;left:50%;} }
+.banAnimate .obj-b{display:block;animation-name:saAni;-webkit-animation:saAni 0.4s linear 0s normal none;-moz-animation:saAni 0.4s linear 0s normal none;animation:saAni 0.4s linear 0s normal none;}
+@-webkit-keyframes saAni{from{opacity:0;-webkit-transform:scale(0,0);} to{opacity:1;-webkit-transform:scale(1,1);} }
+@-moz-keyframes saAni{from{opacity:0;-moz-transform:scale(0,0);} to{opacity:1;-moz-transform:scale(1,1);} }
+@keyframes saAni{from{opacity:0;transform:scale(0,0);} to{opacity:1;transform:scale(1,1);} }
+.watch-code.code-show{display:block;animation-name:scode;-webkit-animation:scode 0.3s linear 0s normal none;-moz-animation:scode 0.3s linear 0s normal none;animation:scode 0.3s linear 0s normal none;}
+@-webkit-keyframes scode{from{opacity:0;-webkit-transform:scale(1,0);transform-origin:left bottom;} to{opacity:1;-webkit-transform:scale(1,1); transform-origin: left bottom;} }
+@-moz-keyframes scode{from{opacity:0;-moz-transform:scale(1,0); transform-origin:left bottom;} to{opacity:1;-moz-transform:scale(1,1);transform-origin:bottom bottom;} }
+@keyframes scode{from{opacity:0;transform:scale(1,0);transform-origin:left bottom;} to{opacity:1;transform:scale(1,1);transform-origin: left bottom;} }
+.banAnimate .obj-c,.banAnimate .obj-e{display:block;animation-name:saAnic;-webkit-animation:saAnic 0.3s linear 0s normal none;-moz-animation:saAnic 0.3s linear 0s normal none;animation:saAnic 0.3s linear 0s normal none;}
+@-webkit-keyframes saAnic{from{opacity:0;left:47%;} to{opacity:1;left:50%;} }
+@-moz-keyframes saAnic{from{opacity:0;left:47%;} to{opacity:1;left:50%;} }
+@keyframes saAnic{from{opacity:0;left:47%;} to{opacity:1;left:50%;} }
+.banAnimate .obj-d,.banAnimate .obj-f{display:block;animation-name:saAnid;-webkit-animation:saAnid 0.3s linear 0s normal none;-moz-animation:saAnid 0.3s linear 0s normal none;animation:saAnid 0.3s linear 0s normal none;}
+@-webkit-keyframes saAnid{from{opacity:0;left:53%;} to{opacity:1;left:50%;} }
+@-moz-keyframes saAnid{from{opacity:0;left:53%;} to{opacity:1;left:50%;} }
+@keyframes saAnid{from{opacity:0;left:53%;} to{opacity:1;left:50%;} }
+
+
+
+/* leftsead */
+#leftsead{width:161px;height:290px;position:fixed;top:350px;right:0px; z-index:100;}
+*html #leftsead{margin-top:258px;position:absolute;top:expression(eval(document.documentElement.scrollTop));}
+#leftsead li{width:161px;height:60px;}
+#leftsead li img{float:right;}
+#leftsead li a{height:49px;float:right;display:block;min-width:47px;max-width:161px;}
+#leftsead li a .shows{display:block;}
+#leftsead li a .hides{margin-right:-143px;cursor:pointer;cursor:hand;}
+#leftsead li a.youhui .hides{display:none;position:absolute;right:143px;}
+#leftsead li a.youhui .2wm{display:none;position:absolute;right:143px;}
+#p2{width:112px;background-color:#ffffff;height:47px;margin-left:47px;border:1px solid #e6e9ea;text-align:center;line-height:47px}
+#p3{width:112px;background-color:#ffffff;height:47px;margin-left:47px;border:1px solid #e6e9ea;text-align:center;line-height:47px}
+#p1{width:47px;height:49px;float:left}
+
+
+
+
+/**************** footer ****************/
+.ft_footer { width: 100%; }
+.copyright { background: #44494c none repeat scroll 0 0; height: 74px; overflow: hidden; }
+.ft_footer_wp { margin: 0 auto; width: 1180px; }
+.copyright p { color: #999; font-size: 12px; margin-top: 14px; text-align: center; }
+.copyright p span.icp { display: inline-block; margin-left:20px; }
+
